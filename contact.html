@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Budilify - Contact</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="contactStyle.css">
+      <link rel="icon" href="favicon.png">
+  </head>
+  <header>
+      <div class="header">
+        <a href="index.html"><img src="logo.png" id="logo"></a>
+        <div class="headerButtons">
+          <a href="https://budilify.neocities.org/#about"><button id="button">ABOUT</button></a>
+          <a href="https://budilify.neocities.org/#contactDiv"><button id="button">HOW TO UPLOAD</button></a>
+          <a href="shop.html"><button id="button">SHOP</button></a>
+        </div>
+      </div>
+  </header>
+  <body>
+    <div class="contactForm" id="contact">
+      <form action="contactForm.php">
+        <input type="text" name="name" id="name" placeholder="Enter your name..." required>
+        <label for="name">Name:</label>
+        <input type="text" name="email" id="email" placeholder="Enter your e-mail..." required>
+        <label for="email">E-mail:</label>
+        <textarea name="subject" id="subject" placeholder="Write something..." style="height:200px" required></textarea>
+        <label for="subject" id="subjectLabel">Subject:</label>
+        <input type="submit" id="sendBtn" value="SEND">
+      </form>
+    </div>
+    <script src="parallaxEffectScript.js"></script>
+  </body>
+  <footer class="footer">
+    <p>
+      Copyright &copy; 2024 Budilify<br>
+      All rights reserved.<br>
+      <a href="login.html" id="linkToLogin" target="_blank">Login</a>
+    </p>
+  </footer>
+</html>

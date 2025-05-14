@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Budilify - Cart</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="cart.css">
+      <link rel="icon" href="favicon.png">
+  </head>
+  <header>
+      <div class="header">
+        <a href="index.html"><img src="logo.png" id="logo"></a>
+        <div class="headerButtons">
+          <a href="https://budilify.neocities.org/#about"><button id="button">ABOUT</button></a>
+          <a href="https://budilify.neocities.org/#howToUpload"><button id="button">HOW TO UPLOAD</button></a>
+          <a href="https://budilify.neocities.org/#contactDiv"><button id="button">CONTACT</button></a>
+          <a href="shop.html"><button id="button">SHOP</button></a>
+        </div>
+      </div>
+  </header>
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" style="font-size: 28px">&#9650;</button>
+    <div class="container">
+      <div class="topSide">
+        <div class="items">
+          <h1 id="cartTitle">YOUR CART</h1>
+          <div id="item">
+            <img src="exampleImageForProductList.png" id="orderImage">
+            <p>Budilify&trade; Alarm Clock - 10&euro;</p>
+          </div>
+          <div id="item">
+            <img src="exampleImageForProductList.png" id="orderImage">
+            <p>Budilify&trade; Pocket T&amp;H Sensor - 5&euro;</p>
+          </div>
+        </div>
+        <div class="prices">
+          <h1 id="pricesTitle">PRICE OF ITEMS</h1>
+          <h3>
+            Price: 15&euro;<br>
+            Discount: none<br>
+            Shipping: 5&euro;<br>
+            Tax: +22%<br>
+          </h3>
+          <h2 id="price">Your total: 23.30&euro;</h2>
+        </div>
+      </div>
+      <div class="bottomSide">
+        <form class="formLeft" action="form1.php">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Your name..." required>
+          <label for="surname">Surame:</label>
+          <input type="text" id="surname" placeholder="Your surname..." required>
+          <label for="country">Country:</label>
+          <select id="country" name="country" required>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Austria">Austria</option>
+            <option value="Italy">Germany</option>
+            <option value="Italy">Poland</option>
+            <option value="Italy">Italy</option>
+          </select>
+          <label for="city">City &amp; Postal Code:</label>
+          <input type="text" id="city" placeholder="City name and postal code..." required>
+        </form>
+        <form class="formRight" action="form2.php">
+          <label for="card">Card number:</label>
+          <input type="password" id="card" placeholder="**** **** **** **** ***" required>
+          <label for="securityCode">CVV:</label>
+          <input type="password" id="securityCode" placeholder="***" required>
+          <label for="month">Month:</label>
+          <input type="number" id="month" name="month" min="1" max="12" placeholder="MM" required>
+          <label for="year">Year:</label>
+          <input type="number" id="year" name="year" min="00" max="99" placeholder="YY" required>
+          <div class="checkbox">
+            <input type="checkbox" id="privacyPolicy" required>
+            <p id="checkboxText">I agree to the Privacy Policy &amp; Terms of Service.</p>
+          </div>
+          <input type="submit" id="submitBtn" value="Pay">
+        </form>
+      </div>
+    </div>
+    <script src="backToTop.js"></script>
+  </body>
+  <footer class="footer">
+    <p>
+      Copyright &copy; 2024 Budilify<br>
+      All rights reserved.
+    </p>
+  </footer>
+</html>

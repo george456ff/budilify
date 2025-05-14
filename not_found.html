@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png">
+    <title>Budilify - Error 404</title>
+    <style>
+    ::selection{
+      color: white;
+      background-color: #38b6ff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff;
+      color: #87CEFA;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      line-height: 1.8;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .clock {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      border: 8px solid #87CEFA;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 4px 15px rgba(135, 206, 250, 0.5);
+      margin-bottom: 20px;
+    }
+
+    .clock-center {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: #87CEFA;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .hand {
+      position: absolute;
+      width: 4px;
+      background: #87CEFA;
+      top: 50%;
+      left: 50%;
+      transform-origin: bottom center;
+    }
+
+    .hour-hand {
+      height: 60px;
+      animation: hour-move 1s linear forwards;
+    }
+
+    .minute-hand {
+      height: 90px;
+      animation: minute-move 1s linear forwards;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 5px 0 20px;
+    }
+
+    .home-button {
+      padding: 10px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #87CEFA;
+      border: none;
+      border-radius: 20px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(135, 206, 250, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .home-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 15px rgba(135, 206, 250, 0.7);
+    }
+
+    @keyframes hour-move {
+      0% {
+        transform: translate(-50%, -100%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -100%) rotate(90deg);
+      }
+    }
+
+    @keyframes minute-move {
+      0% {
+        transform: translate(-50%, -100%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -100%) rotate(360deg);
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="clock">
+        <div class="clock-center"></div>
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+      </div>
+      <h1>404 - Page Not Found</h1>
+      <p><b>Oops! It seems the page you’re looking for doesn’t exist.</b></p>
+      <a href="/" class="home-button">Return Home</a>
+    </div>
+  </body>
+</html>

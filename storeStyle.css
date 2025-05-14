@@ -1,0 +1,210 @@
+body{
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.storeHeading{
+  text-align: center;
+  padding: 220px;
+  background-image: url("onlineShopImage.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#storeTitle{
+  color: white;
+  font-size: 64px;
+  line-height: 1.6;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50px;
+  box-shadow: 0 0 8px 0 black;
+  padding: 20px;
+  transition: transform 0.3s ease, display 0.3s ease, color 0.3s ease, background-color 0.3s ease, text-shadow 0.3s ease, box-shadow 0.3s ease;
+}
+
+#storeTitle span {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+#storeTitle:hover{
+  -webkit-text-stroke: 1px #38b6ff;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 8px #38b6ff;
+  box-shadow: 0 0 8px 0 white;
+  transform: scale(1.05);
+}
+
+#storeTitle:hover span{
+  opacity: 0;
+  visibility: hidden;
+}
+
+#storeTitle:hover:before {
+  content: "HANDCRAFTED";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#productListHeading{
+  -webkit-text-stroke: 5px black;
+  color: white;
+  font-size: 64px;
+  padding: 32px;
+  text-align: center;
+}
+
+.productList {
+  background-image: linear-gradient(to top left, #38b6ff, #9ce0fc, white);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+#product {
+  background-color: white;
+  font-weight: bold;
+  padding: 20px;
+  margin: 20px;
+  flex: 1 1 calc(50% - 40px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+#product h1 {
+  font-size: 18px;
+}
+
+#product p {
+  font-size: 14px;
+}
+
+#product:hover{
+  transform: scale(1.05);
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+#listImage{
+  height: 128px;
+  width: 192px;
+  border-radius: 25px;
+}
+
+.moreInfoButton {
+  display: inline-block;
+  border-radius: 15px;
+  color: #38b6ff;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin: 5px;
+  background-color: white;
+  border: 3px solid #38b6ff;
+  position: relative;
+  font-weight: bold;
+}
+
+.moreInfoButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.moreInfoButton:hover {
+  color: black;
+  border: 3px solid transparent;
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(to right, #38b6ff, white);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image: linear-gradient(to right, #38b6ff, white);
+  cursor: pointer;
+}
+
+.moreInfoButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+}
+
+.moreInfoButton:hover span {
+  padding-right: 25px;
+}
+
+.moreInfoButton:hover span:after {
+  opacity: 1;
+  right: 0;
+  color: black;
+}
+
+.moreInfoButton:active{
+  border: none;
+  box-shadow: 0 0 8px #38b6ff;
+}
+
+/* Adjust Heading Section for Mobile */
+@media (max-width: 768px) {
+  .storeHeading {
+    padding: 250px 20px; /* Reduce padding for smaller screens */
+    background-attachment: scroll; /* Fix background issues on mobile */
+  }
+
+  #storeTitle {
+    font-size: 48px; /* Adjust font size for readability */
+    line-height: 1.4; /* Improve spacing */
+    padding: 10px; /* Reduce padding inside the title */
+    border-radius: 20px; /* Reduce border-radius for smaller screens */
+  }
+  
+  #storeTitle:hover{
+    -webkit-text-stroke: 0px black;
+    color: black;
+    text-shadow: 0 0 8px black;
+  }
+  
+  #storeTitle:hover:before {
+    content: "HANDCRAFTED";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #productListHeading{
+    font-size: 32px;
+    color: black;
+    -webkit-text-stroke: 0px white;
+  }
+}
+
+/* General Styles for Larger Monitors */
+@media (min-width: 1024px) {
+  .storeHeading{
+    padding: 300px; /* Increase padding for larger screens */
+    background-attachment: fixed; /* Parallax effect */
+    min-height: 30vh; /* Ensure it takes full screen height */
+  }
+
+  #storeTitle{
+    font-size: 72px; /* Increase font size */
+    line-height: 1.2;
+    padding: 30px;
+    border-radius: 60px;
+  }
+}

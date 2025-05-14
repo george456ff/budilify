@@ -1,0 +1,173 @@
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: whitesmoke; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #38b6ff; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3d3c3c;
+}
+
+::selection{
+  color: white;
+  background-color: #38b6ff;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #38b6ff;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#myBtn:hover {
+  color: black;
+  background-color: white;
+  transform: scale(1.05);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px 0 rgba(0, 255, 255, 0.6);
+}
+
+#myBtn:active {
+  color: white;
+  background-color: #6ac7fc;
+}
+
+html, header, body, footer{
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    font-family: Sans-Serif;
+    font-weight: bold;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    caret-color: #38b6ff
+}
+
+header{
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#logo{
+  width: 160px;
+  height: 60px;
+  border-radius: 15px;
+  padding: 5px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#logo:hover{
+  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px 0 rgba(0, 255, 255, 0.6);
+}
+
+.loginForm{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url("loginBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 50px;
+  margin: auto;
+  border-radius: 50px;
+  font-size: 24px;
+  color: white;
+  background: linear-gradient(135deg, #ffffff1a, #ffffff1a);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #ffffff2e;
+  box-shadow: 0 8px 32px #0000005e;
+}
+
+input{
+  padding: 10px;
+  margin-bottom: 50px;
+  font-size: 22px;
+  line-height: 2;
+  border: none;
+  border-radius: 15px;
+}
+
+
+input::placeholder{
+  transition: all 0.3s ease;
+}
+
+input:hover::placeholder{
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+label{
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 0.3s ease;
+}
+
+input:hover + label{
+  opacity: 1;
+  text-shadow: 3px 3px 5px black;
+  transform: translateY(-160px);
+}
+
+#loginBtn{
+  color: white;
+  background: linear-gradient(135deg, #38b6ff1a, #38b6ff1a);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+#loginBtn:hover{
+  cursor: pointer;
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #38b6ff1a, #38b6ff1a);
+  box-shadow: 0 8px 32px #0000005e;
+}
+
+#loginBtn:active{
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+.footer{
+  color: white;
+  background-color: #2f3030;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 1000px){
+  .loginForm{
+    text-align: center;
+    background-attachment: scroll;
+  }
+}

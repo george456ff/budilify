@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Budilify</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="icon" href="favicon.png">
+  </head>
+  <header>
+      <div class="header">
+        <a href="index.html"><img src="logo.png" id="logo"></a>
+        <div class="headerButtons">
+          <a href="#about"><button id="button">ABOUT</button></a>
+          <a href="#howToUpload"><button id="button">HOW TO UPLOAD</button></a>
+          <a href="#contactDiv"><button id="button">CONTACT</button></a>
+          <a href="shop.html"><button id="button">SHOP</button></a>
+        </div>
+      </div>
+  </header>
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" style="font-size: 28px">&#9650;</button>
+    <div class="heading" id="parallax">
+        <h1 id="headingTitle">Wake up to your own tunes</h1>
+    </div>
+    <div class="about" id="about">
+      <div id="aboutDiv">
+        <h1 id="aboutTitle">About</h1>
+        <p id="aboutParagraph">
+          Budilify&trade; is a brand that represents<br>
+          quality, affordable and handcrafted electronical products.<br>
+          Our main product is an alarm clock with the ability to upload<br>
+          custom music files for your alarm.
+        </p>
+      </div>
+    </div>
+    <div class="howTo" id="howToUpload">
+      <h1 id="howToHeading">Budilify Clock - File Uploading</h1>
+      <p id="howToParagraph">
+          Budilify&trade; clock will only allow up to 7MB of file upload.<br>
+          Average mp3 music files are between 2 and 3MB in size.<br>
+          You can upload an mp3 file using a USB cable.<br>
+          The Budilify&trade; alarm clock behaves exactly like a USB key.
+      </p>
+    </div>
+    <div class="contact">
+      <div id="contactDiv">
+          <h1 id="contactHeading">Contact information</h1>
+          <p id="contactParagraph">
+               You can contact the owner of Budilify&trade;<br>
+               by filling out a form or using social media.
+          </p>
+          <div class="contactButtons">
+            <a href="contact.html" target="_blank" style="text-decoration: none;">
+                <button id="twitterButton">FORM</button>
+            </a>
+            <a href="https://www.instagram.com/techblogandnews/" target="_blank" style="text-decoration: none;">
+                <button id="instagramButton">INSTAGRAM</button>
+            </a>
+            <a href="https://x.com/TechBlogSl" target="_blank" style="text-decoration: none;">
+                <button id="twitterButton">TWITTER</button>
+            </a>
+          </div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="backToTop.js"></script>
+    <script src="parallaxEffectScript.js"></script>
+  </body>
+  <footer class="footer">
+    <p>
+      Copyright &copy; 2024 Budilify<br>
+      All rights reserved.<br>
+      <a href="login.html" id="linkToLogin" target="_blank">Login</a>
+    </p>
+  </footer>
+</html>

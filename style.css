@@ -1,0 +1,564 @@
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: whitesmoke; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #38b6ff; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3d3c3c;
+}
+
+::selection{
+  color: white;
+  background-color: #38b6ff;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #38b6ff;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#myBtn:hover {
+  color: black;
+  background-color: white;
+  transform: scale(1.05);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px 0 rgba(0, 255, 255, 0.6);
+}
+
+#myBtn:active {
+  color: white;
+  background-color: #6ac7fc;
+}
+
+html, header, body, footer{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#logo{
+  width: 160px;
+  height: 60px;
+  border-radius: 15px;
+  padding: 5px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#logo:hover{
+  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px 0 rgba(0, 255, 255, 0.6);
+}
+
+.headerButtons{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+#button{
+  color: white;
+  background-color: #38b6ff;
+  font-family: sans-serif;
+  font-weight: bolder;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  margin: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#button:hover{
+  color: white;
+  background-color: #6ac7fc;
+  box-shadow: 0 8px 8px 0 rgba(0, 255, 255, 0.4);
+  transform: scale(1.05);
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+#button:active{
+  color: #6ac7fc;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 255, 255, 0.6);
+}
+
+body{
+  background-color: white;
+}
+
+.heading{
+  text-align: center;
+  padding: 220px;
+  background-image: url("homePageBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#headingTitle{
+  color: white;
+  font-family: sans-serif;
+  font-size: 64px;
+  text-shadow: 5px 5px 8px black;
+  line-height: 1.6;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50px;
+  box-shadow: 0 0 8px 0 black;
+  padding: 20px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#headingTitle.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.about{
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  line-height: 1.6;
+  padding: 220px;
+  background-image: url("aboutUsBackground.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#aboutDiv{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50px;
+  box-shadow: 0 0 8px 0 black;
+  padding: 20px;
+}
+
+#aboutTitle{
+  font-size: 64px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#aboutTitle.active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+#aboutParagraph{
+  font-size: 24px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#aboutParagraph.active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.howTo{
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  line-height: 1.6;
+  padding: 150px;
+  box-shadow: 0 -10px 30px 30px white;
+}
+
+#howToHeading{
+  font-size: 64px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#howToHeading.active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+#howToParagraph{
+  font-size: 24px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#howToParagraph.active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.contact{
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  line-height: 1.6;
+  padding: 150px;
+  background-image: url("ContactUS.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#contactDiv{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50px;
+  box-shadow: 0 0 8px 0 black;
+  padding: 20px;
+}
+
+#contactHeading{
+  font-size: 64px;
+}
+
+#contactParagraph{
+  font-size: 24px;
+}
+
+#instagramButton{
+  position: relative;
+  color: white;
+  background: linear-gradient(to bottom right, purple, purple, red, yellow);
+  font-family: sans-serif;
+  font-weight: bolder;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  margin: 5px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#instagramButton::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, red, yellow);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#instagramButton:hover{
+  transform: scale(1.05);
+  transform: translateY(-5px);
+  cursor: pointer;
+  box-shadow: 5px 5px 8px 0 rgba(255, 255, 0, 0.4);
+}
+
+#instagramButton:hover::before{
+  opacity: 1;
+}
+
+#twitterButton{
+  position: relative;
+  color: black;
+  background: linear-gradient(to bottom right, #38b6ff, white);
+  font-family: sans-serif;
+  font-weight: bolder;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  margin: 5px;
+  overflow: hidden;
+  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#twitterButton::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, black, black);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#twitterButton:hover{
+  color: white;
+  transform: scale(1.05);
+  transform: translateY(-5px);
+  cursor: pointer;
+  box-shadow: 5px 5px 8px 0 rgba(0, 255, 255, 0.4);
+}
+
+#twitterButton:hover::before{
+  opacity: 1;
+}
+
+.footer{
+  color: white;
+  background-color: #2f3030;
+  font-family: sans-serif;
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: center;
+  padding: 20px;
+}
+
+#linkToLogin{
+  color: white;
+  text-decoration: none;
+}
+
+#linkToLogin:hover{
+  color: #38b6ff;
+  text-decoration: underline;
+}
+
+#linkToLogin:active{
+  text-decoration-style: double;
+}
+
+/* For mobile screens */
+
+/* Responsive Header Button Design */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  #logo {
+    margin: 0 auto 20px;
+  }
+
+  .headerButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  #button {
+    margin: 5px;
+  }
+}
+
+/* Adjust Heading Section for Mobile */
+@media (max-width: 768px) {
+  .heading {
+    padding: 250px 20px; /* Reduce padding for smaller screens */
+    background-attachment: scroll; /* Fix background issues on mobile */
+  }
+
+  #headingTitle {
+    font-size: 48px; /* Adjust font size for readability */
+    line-height: 1.4; /* Improve spacing */
+    padding: 10px; /* Reduce padding inside the title */
+    border-radius: 20px; /* Reduce border-radius for smaller screens */
+  }
+}
+
+/* Adjust About Section for Mobile */
+@media (max-width: 768px) {
+  .about {
+    padding: 150px 20px; /* Reduce padding for smaller screens */
+    background-attachment: scroll; /* Fix background attachment */
+    background-size: contain;
+  }
+
+  #aboutDiv {
+    padding: 15px; /* Reduce padding inside the box */
+    border-radius: 20px; /* Reduce border-radius for smaller screens */
+  }
+
+  #aboutTitle {
+    font-size: 48px; /* Adjust title font size */
+  }
+
+  #aboutParagraph {
+    font-size: 24px; /* Adjust paragraph font size */
+  }
+}
+
+/* Adjust How to Upload Section for Mobile */
+@media (max-width: 768px) {
+  .howTo {
+    padding: 100px 20px; /* Reduce padding for smaller screens */
+  }
+
+  #howToHeading {
+    font-size: 48px; /* Adjust title font size */
+  }
+
+  #howToParagraph {
+    font-size: 24px; /* Adjust paragraph font size */
+  }
+}
+
+/* Adjust Contact Section for Mobile */
+@media (max-width: 768px) {
+  .contact {
+    padding: 250px 20px; /* Reduce padding for smaller screens */
+    background-attachment: scroll; /* Fix background attachment */
+  }
+
+  #contactDiv {
+    padding: 15px; /* Reduce padding inside the box */
+    border-radius: 20px; /* Reduce border-radius for smaller screens */
+  }
+  
+  .contactButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  #contactHeading {
+    font-size: 48px; /* Adjust title font size */
+  }
+
+  #contactParagraph {
+    font-size: 24px; /* Adjust paragraph font size */
+  }
+
+  #instagramButton, #twitterButton {
+    padding: 20px; /* Reduce button padding for smaller screens */
+    font-size: 20px; /* Adjust button font size */
+  }
+}
+
+/* General Styles for Larger Monitors */
+@media (min-width: 1024px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #logo {
+    margin: 0;
+  }
+
+  .headerButtons {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+  }
+
+  #button {
+    margin: 0;
+  }
+
+  .heading {
+    padding: 300px 40px; /* Increase padding for larger screens */
+    min-height: 50vh; /* Make sure the heading section takes full screen height */
+    background-attachment: fixed; /* Parallax effect */
+  }
+
+  #headingTitle {
+    font-size: 96px; /* Increase font size for larger screens */
+    line-height: 1.2;
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  .about {
+    padding: 250px 40px; /* Adjust padding for larger screens */
+    min-height: 50vh; /* Make sure the about section takes full screen height */
+    background-size: cover; /* Ensure background covers entire section */
+  }
+
+  #aboutDiv {
+    padding: 30px; /* Adjust padding inside the box */
+    border-radius: 30px;
+  }
+
+  #aboutTitle {
+    font-size: 80px; /* Increase title font size */
+  }
+
+  #aboutParagraph {
+    font-size: 40px; /* Adjust paragraph font size */
+  }
+
+  .howTo {
+    padding: 200px 40px; /* Adjust padding for larger screens */
+    min-height: 50vh; /* Make sure the how to section takes full screen height */
+  }
+
+  #howToHeading {
+    font-size: 80px; /* Increase title font size */
+  }
+
+  #howToParagraph {
+    font-size: 40px; /* Adjust paragraph font size */
+  }
+
+  .contact {
+    padding: 350px 40px; /* Adjust padding for larger screens */
+    min-height: 50vh; /* Make sure the contact section takes full screen height */
+    background-attachment: fixed; /* Parallax effect */
+  }
+
+  #contactDiv {
+    padding: 30px; /* Adjust padding inside the box */
+    border-radius: 30px;
+  }
+
+  #contactHeading {
+    font-size: 80px; /* Increase title font size */
+  }
+
+  #contactParagraph {
+    font-size: 40px; /* Adjust paragraph font size */
+  }
+
+  #instagramButton, #twitterButton {
+    padding: 15px; /* Adjust button padding for larger screens */
+    font-size: 16px; /* Adjust button font size */
+  }
+}
